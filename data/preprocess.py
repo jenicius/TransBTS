@@ -31,7 +31,7 @@ def nib_load(file_name):
         print('Invalid file name, can not find the file!')
 
     proxy = nib.load(file_name)
-    data = proxy.get_data()
+    data = proxy.get_fdata()
     proxy.uncache()
     return data
 
