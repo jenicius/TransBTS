@@ -157,8 +157,8 @@ def main_worker():
     else:
         logging.info('re-training!!!')
 
-    train_list = os.path.join(args.root, args.train_dir, args.train_file)
-    train_root = os.path.join(args.root, args.train_dir)
+    train_list = args.train_file
+    train_root = args.train_dir
 
     train_set = BraTS(train_list, train_root, args.mode)
     train_sampler = torch.utils.data.distributed.DistributedSampler(train_set)
