@@ -137,7 +137,7 @@ class BraTS(Dataset):
                 line = line.strip()
                 name = line.split('/')[-1]
                 names.append(name)
-                path = os.path.join(root, line, name + '_')
+                path = os.path.join(root, name + '_')
                 paths.append(path)
                 self.lines.append(line)
         self.mode = mode
